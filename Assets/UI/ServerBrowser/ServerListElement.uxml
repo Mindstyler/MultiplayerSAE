@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ServerBrowser/ServerListElement.uss?fileID=7433441132597879392&amp;guid=d0e57e5598929834082fc5139ee9e5d1&amp;type=3#ServerListElement" />
+    <ui:VisualElement name="container">
+        <ui:Label text="server name" display-tooltip-when-elided="true" name="server-name" />
+        <ui:Label text="player count" display-tooltip-when-elided="true" name="player-count" />
+        <ui:Button text="connect button localized" display-tooltip-when-elided="true" name="connect-button" />
+    </ui:VisualElement>
+</ui:UXML>
