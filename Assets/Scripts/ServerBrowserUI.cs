@@ -1,6 +1,8 @@
 using System;
 using System.Collections.ObjectModel;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
@@ -8,6 +10,14 @@ internal class ServerBrowserUI : MonoBehaviour
 {
     [SerializeField]
     private VisualTreeAsset _serverListElement;
+    [SerializeField]
+    private LocalizedString _serverNameHeader;
+    [SerializeField]
+    private LocalizedString _playerCountHeader;
+    [SerializeField]
+    private LocalizedString _connectButtonHeader;
+    [SerializeField]
+    private LocalizedString _connectButton;
 
     private VisualElement _root;
 
@@ -17,7 +27,15 @@ internal class ServerBrowserUI : MonoBehaviour
 
         ListView listView = _root.Q<ListView>();
 
-        listView.makeItem = () => _serverListElement.CloneTree();
+        LocalizeServerBrowserUI();
+
+        listView.makeItem = () =>
+        {
+            TemplateContainer listElement = _serverListElement.CloneTree();
+            _connectButton.StringChanged += localizedText => listElement.Q<Button>("connect-button").text = localizedText;
+
+            return listElement;
+        };
 
         listView.bindItem = (element, index) =>
         {
@@ -42,5 +60,12 @@ internal class ServerBrowserUI : MonoBehaviour
         listView.itemsSource = ServerManager.Instance.ServerList;
 
         ServerManager.Instance.ServerList.CollectionChanged += (_, _) => listView.RefreshItems();
+    }
+
+    private void LocalizeServerBrowserUI()
+    {
+        _serverNameHeader.StringChanged += localizedText => _root.Q<Label>("server-name-header").text = localizedText;
+        _playerCountHeader.StringChanged += localizedText => _root.Q<Label>("player-count-header").text = localizedText;
+        _connectButtonHeader.StringChanged += localizedText => _root.Q<Label>("connect-button-header").text = localizedText;
     }
 }

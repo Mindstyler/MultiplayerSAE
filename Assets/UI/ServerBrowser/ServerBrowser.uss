@@ -5,3 +5,12 @@
 .list {
     flex-grow: 1;
 }
+
+#header {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerElement {
+    color: rgba(255, 255, 255, 255);
+}
