@@ -3,7 +3,7 @@ using Unity.Collections;
 using Unity.Networking.Transport;
 using UnityEngine;
 
-public class HostListener : MonoBehaviour
+internal class HostListener : MonoBehaviour
 {
     private NetworkDriver _driver;
     private NativeList<NetworkConnection> _connections;
@@ -64,17 +64,7 @@ public class HostListener : MonoBehaviour
                 {
                     Debug.Log("Received data from a new client");
 
-                    ServerInfo server = new(
-                            streamReader.ReadFixedString32().ToString(),
-                            streamReader.ReadByte(),
-                            streamReader.ReadByte(),
-                            streamReader.ReadUShort(),
-                            streamReader.ReadFixedString32().ToString(),
-                            streamReader.ReadUShort());
-
-                    _availableServers.Add(server);
-
-                    Debug.Log(server);
+                    _availableServers.Add(ServerInfo.DeserializeFromNetwork(ref streamReader));
 
                     _driver.BeginSend(NetworkPipeline.Null, _connections[i], out DataStreamWriter writer);
 
@@ -97,12 +87,7 @@ public class HostListener : MonoBehaviour
 
         foreach (ServerInfo server in _availableServers)
         {
-            writer.WriteFixedString32(server.Name);
-            writer.WriteByte(server.CurrentPlayer);
-            writer.WriteByte(server.MaxPlayers);
-            writer.WriteUShort(server.Ping);
-            writer.WriteFixedString32(server.Address);
-            writer.WriteUShort(server.Port);
+            server.SerializeForNetwork(ref writer);
         }
     }
 

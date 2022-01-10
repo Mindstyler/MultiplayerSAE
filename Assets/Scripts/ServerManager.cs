@@ -26,6 +26,11 @@ internal class ServerManager : MonoBehaviour
     //    StartCoroutine(DebugAddMoreServersContinuously());
     //}
 
+    internal void HostNewServer(string serverName, ushort portNumber, byte maxPlayers)
+    {
+        ServerInfo hostedServer = new(serverName, 1, maxPlayers, NetworkEndPoint.AnyIpv4.Address, portNumber);
+    }
+
     internal void ConnectToServer(int sourceIndex)
     {
         Debug.Log($"tried to connect to server {ServerList[sourceIndex].Name}");
@@ -37,7 +42,7 @@ internal class ServerManager : MonoBehaviour
 
         while (true)
         {
-            ServerList.Add(new ServerInfo($"Generated Server {++i}", (byte)Random.Range(0, 11), 10, (ushort)Random.Range(20, 501), NetworkEndPoint.AnyIpv4.Address, 9000));
+            ServerList.Add(new ServerInfo($"Generated Server {++i}", (byte)Random.Range(0, 11), 10, NetworkEndPoint.AnyIpv4.Address, 9000));
 
             yield return new WaitForSeconds(0.8f);
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Networking.Transport;
 using UnityEngine;
 
-public class NotifyMainServer : MonoBehaviour
+internal class NotifyMainServer : MonoBehaviour
 {
     private NetworkDriver _driver;
     private NetworkConnection _connection;
@@ -60,15 +60,7 @@ public class NotifyMainServer : MonoBehaviour
 
                 for (int i = 0; i < elementCount; ++i)
                 {
-                    ServerInfo server = new(
-                        streamReader.ReadFixedString32().ToString(),
-                        streamReader.ReadByte(),
-                        streamReader.ReadByte(),
-                        streamReader.ReadUShort(),
-                        streamReader.ReadFixedString32().ToString(),
-                        streamReader.ReadUShort());
-
-                    ServerManager.Instance.ServerList.Add(server);
+                    ServerManager.Instance.ServerList.Add(ServerInfo.DeserializeFromNetwork(ref streamReader));
                 }
 
                 //_done = true;
@@ -86,12 +78,7 @@ public class NotifyMainServer : MonoBehaviour
 
     private void AppendServerData(ref DataStreamWriter writer)
     {
-        writer.WriteFixedString32("MyServer");
-        writer.WriteByte(0); // current players
-        writer.WriteByte(4); // max players
-        writer.WriteUShort(43);
-        writer.WriteFixedString32(NetworkEndPoint.AnyIpv4.Address);
-        writer.WriteUShort(9000); // port
+        new ServerInfo("MyServer", 0, 4, NetworkEndPoint.AnyIpv4.Address, 9000).SerializeForNetwork(ref writer);
     }
 
     private void OnDestroy()
