@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 20960448}
   - component: {fileID: 20960447}
-  - component: {fileID: 20960446}
   - component: {fileID: 20960450}
   - component: {fileID: 20960449}
+  - component: {fileID: 20960446}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -157,18 +157,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serverBrowserButtonText:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1162671925497856
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _hostServerButtonText:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1162696684474368
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

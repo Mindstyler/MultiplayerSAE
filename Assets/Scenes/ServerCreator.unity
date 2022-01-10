@@ -325,3 +325,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6663ddc1a05c0b749adb86620105f186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _serverNameInputText:
+    m_TableReference:
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
+    m_TableEntryReference:
+      m_KeyId: 1166026634694656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _portInputText:
+    m_TableReference:
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
+    m_TableEntryReference:
+      m_KeyId: 1166077591293952
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _createServerButtonText:
+    m_TableReference:
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
+    m_TableEntryReference:
+      m_KeyId: 1177992350666752
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _maxPlayersSliderText:
+    m_TableReference:
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
+    m_TableEntryReference:
+      m_KeyId: 1178020687384576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

@@ -31,6 +31,30 @@ MonoBehaviour:
     m_Key: connect-button
     m_Metadata:
       m_Items: []
+  - m_Id: 1162671925497856
+    m_Key: server-browser-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162696684474368
+    m_Key: host-server-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166026634694656
+    m_Key: server-name-input-field
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166077591293952
+    m_Key: port-input-field
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1177992350666752
+    m_Key: create-server-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1178020687384576
+    m_Key: max-players-slider
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

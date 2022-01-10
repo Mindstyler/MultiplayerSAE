@@ -34,6 +34,22 @@ MonoBehaviour:
     m_Localized: Connect
     m_Metadata:
       m_Items: []
+  - m_Id: 1162671925497856
+    m_Localized: Server Browser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162696684474368
+    m_Localized: Host Server
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166026634694656
+    m_Localized: Server Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166077591293952
+    m_Localized: Port
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

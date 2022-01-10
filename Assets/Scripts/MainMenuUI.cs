@@ -20,14 +20,12 @@ public class MainMenuUI : MonoBehaviour
         _root = GetComponent<UIDocument>().rootVisualElement;
 
         Button serverBrowserButton = _root.Q<Button>("server-browser-button");
-
-        serverBrowserButton.clickable.clicked += async () => await LoadScene(1);
-
+        serverBrowserButton.clickable.clicked += static async () => await LoadScene(1);
         _serverBrowserButtonText.StringChanged += localizedTest => serverBrowserButton.text = localizedTest;
 
         Button hostServerButton = _root.Q<Button>("host-server-button");
-
-        hostServerButton.clickable.clicked += async () => await LoadScene(2);
+        hostServerButton.clickable.clicked += static async () => await LoadScene(2);
+        _hostServerButtonText.StringChanged += localizedText => hostServerButton.text = localizedText;
 
         static async Task LoadScene(int sceneIndex)
         {
