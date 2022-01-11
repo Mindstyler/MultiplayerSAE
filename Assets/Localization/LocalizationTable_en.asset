@@ -50,6 +50,14 @@ MonoBehaviour:
     m_Localized: Port
     m_Metadata:
       m_Items: []
+  - m_Id: 1177992350666752
+    m_Localized: Create Server
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1178020687384576
+    m_Localized: Max Players
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

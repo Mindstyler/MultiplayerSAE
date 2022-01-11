@@ -1,7 +1,3 @@
-//using UnityTransportSerializationGenerator;
-
-//using UnityTrans
-
 using System;
 
 [UnityTransportSerialize]
