@@ -2,7 +2,6 @@ using System;
 using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Tables;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]

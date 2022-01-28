@@ -6,7 +6,7 @@ using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class MainMenuUI : MonoBehaviour
+internal class MainMenuUI : MonoBehaviour
 {
     [SerializeField]
     private LocalizedString _serverBrowserButtonText;
