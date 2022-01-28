@@ -362,8 +362,6 @@ GameObject:
   - component: {fileID: 1158238240}
   - component: {fileID: 1158238239}
   - component: {fileID: 1158238238}
-  - component: {fileID: 1158238242}
-  - component: {fileID: 1158238241}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -410,46 +408,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158238241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158238237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81cadc404cd2b4f4baededae99a464d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1158238242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158238237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
-    m_TableEntryReference:
-      m_KeyId: 70064838582272
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2116597400
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +506,15 @@ MonoBehaviour:
       m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
     m_TableEntryReference:
       m_KeyId: 70402966593536
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _returnToMenuButtonText:
+    m_TableReference:
+      m_TableCollectionName: GUID:e88768a4c5ceb3a4eb52636360ed3734
+    m_TableEntryReference:
+      m_KeyId: 7570836253876224
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

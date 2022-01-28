@@ -4,6 +4,7 @@
         <ui:TextField picking-mode="Ignore" text="server name localized" name="server-name-input-field" max-length="32" />
         <ui:TextField picking-mode="Ignore" text="port filler localized" name="port-input-field" max-length="5" />
         <ui:SliderInt picking-mode="Ignore" label="max players slider localized" value="4" high-value="255" show-input-field="true" low-value="1" />
-        <ui:Button text="create server button localized" display-tooltip-when-elided="true" enable-rich-text="false" />
+        <ui:Button text="create server button localized" display-tooltip-when-elided="true" enable-rich-text="false" name="create-server-button" />
+        <ui:Button text="back to main menu localized" display-tooltip-when-elided="true" name="return-to-main-menu-button" />
     </ui:VisualElement>
 </ui:UXML>

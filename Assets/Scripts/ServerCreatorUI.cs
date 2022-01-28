@@ -18,6 +18,8 @@ internal class ServerCreatorUI : MonoBehaviour
     private LocalizedString _createServerButtonText;
     [SerializeField]
     private LocalizedString _maxPlayersSliderText;
+    [SerializeField]
+    private LocalizedString _returnToMenuButtonText;
 
     private void Start()
     {
@@ -41,8 +43,12 @@ internal class ServerCreatorUI : MonoBehaviour
         SliderInt maxPlayersSlider = _root.Q<SliderInt>();
         _maxPlayersSliderText.StringChanged += localizedText => maxPlayersSlider.label = localizedText;
 
-        Button createServerButton = _root.Q<Button>();
+        Button createServerButton = _root.Q<Button>("create-server-button");
         _createServerButtonText.StringChanged += localizedText => createServerButton.text = localizedText;
         createServerButton.clickable.clicked += () => ServerManager.Instance.HostNewServer(serverNameInput.value, ushort.Parse(portInput.value), (byte)maxPlayersSlider.value);
+
+        Button returnToMenuButton = _root.Q<Button>("return-to-main-menu-button");
+        _returnToMenuButtonText.StringChanged += localizedText => returnToMenuButton.text = localizedText;
+        returnToMenuButton.clickable.clicked += static async () => await SceneLoader.LoadSceneAsync(0);
     }
 }

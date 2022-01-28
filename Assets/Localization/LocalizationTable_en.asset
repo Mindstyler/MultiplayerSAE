@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: Max Players
     m_Metadata:
       m_Items: []
+  - m_Id: 7570836253876224
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

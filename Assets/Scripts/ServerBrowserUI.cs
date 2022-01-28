@@ -18,6 +18,8 @@ internal class ServerBrowserUI : MonoBehaviour
     private LocalizedString _connectButtonHeader;
     [SerializeField]
     private LocalizedString _connectButton;
+    [SerializeField]
+    private LocalizedString _returnToMenuButtonText;
 
     private VisualElement _root;
 
@@ -58,6 +60,10 @@ internal class ServerBrowserUI : MonoBehaviour
         };
 
         listView.itemsSource = ServerManager.Instance.ServerList;
+
+        Button returnToMenuButton = _root.Q<Button>("return-to-main-menu-button");
+        _returnToMenuButtonText.StringChanged += localizedText => returnToMenuButton.text = localizedText;
+        returnToMenuButton.clickable.clicked += static async () => await SceneLoader.LoadSceneAsync(0);
 
         ServerManager.Instance.ServerList.CollectionChanged += (_, _) => listView.RefreshItems();
     }

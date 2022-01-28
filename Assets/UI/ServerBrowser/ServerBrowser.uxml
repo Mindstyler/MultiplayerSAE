@@ -7,5 +7,6 @@
             <ui:Label text="connect button header localized" display-tooltip-when-elided="true" name="connect-button-header" class="headerElement" />
         </ui:VisualElement>
         <ui:ListView focusable="true" selection-type="None" class="list" />
+        <ui:Button text="return to main menu localized" display-tooltip-when-elided="true" name="return-to-main-menu-button" />
     </ui:VisualElement>
 </ui:UXML>

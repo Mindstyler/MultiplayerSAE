@@ -3,3 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.container-element {
+    color: rgba(255, 255, 255, 255);
+}
